@@ -1,0 +1,23 @@
+body {
+		background-color: #ccc;
+		position: relative;
+}
+div	{
+	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+
+ 	text-align: center;
+}
+
+div ul li{
+	list-style: none;
+	float: left;
+	margin-left: 5px;
+}
+
+div ul li:not(:last-child):after{
+	content: '|';
+	margin-left: 5px;
+}
