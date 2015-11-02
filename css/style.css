@@ -1,23 +1,37 @@
 body {
-		background-color: #ccc;
+		background-color: #468966;
 		position: relative;
 }
-div	{
+div#container	{
 	position: absolute;
  	top: 50%;
  	left: 50%;
  	transform: translate(-50%, -50%);
 
  	text-align: center;
+
+ 	color: #FFB03B;
+ 	font-family: 'Roboto', sans-serif;
 }
 
-div ul li{
-	list-style: none;
-	float: left;
-	margin-left: 5px;
+div#container h1{
+	font-family: 'Ubuntu', sans-serif;
+	color: #FFF0A5;
 }
 
-div ul li:not(:last-child):after{
-	content: '|';
-	margin-left: 5px;
+div#links a{
+
+	margin: 4px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+
+	padding: 8px;
+	border-radius: 8px;
+	background-color: #FFB03B;
+	color: #FFF0A5;
+}
+
+div#links a:hover{
+	background-color: #B64926;
 }
