@@ -2,10 +2,19 @@
 <html>
 <head>
 	<title>Pranay Prakash</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/typed.js/js/typed.js"></script>
-    </body>
+    <span class="jumbotron"></span>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/typed.js/js/typed.js"></script>
+    <script>
+        $(function(){
+            $(".jumbotron").typed({
+                strings: ["I am a developer.", "I am a designer.", "I am Pranay."],
+                typespeed: 0
+            });
+        });
+    </script>
+</body>
 </html>
