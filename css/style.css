@@ -14,9 +14,13 @@ div#container	{
  	font-family: 'Roboto', sans-serif;
 }
 
-div#container h1{
+div#container span#header{
+    font-size: 30pt;
 	font-family: 'Ubuntu', sans-serif;
 	color: #FFF0A5;
+}
+div#container span#subHeader{
+    font-size: 20pt;
 }
 
 div#links a{
@@ -56,4 +60,9 @@ div#links a:hover{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+#links {
+    margin-top: 30px;
+    display: none;
 }

@@ -1,21 +1,44 @@
 <html>
-	<head>
-		<title>Pranay Prakash</title>
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-		<div id="container">
-			<h1>Page Under Construction</h1>
-			<p>Till I fill up this page with everything awesome, why don't you check out these links?</p>
-			<div id="links">
-				<a href="https://github.com/pranaygp/resume/blob/master/LatestResume.pdf">Resume</a>
-				<a href="https://github.com/pranaygp/">Github</a>
-				<a href="http://linkedin.com/in/pranaygp">LinkedIn</a>
-				<a href="https://www.facebook.com/boboskull">Facebook</a>
-				<a href="http://c.xkcd.com/random/comic/">???</a>
-			</div>
-		</div>
-	</body>
-	</html>
+    <head>
+        <title>Pranay Prakash</title>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div id="container">
+            <span id="header"></span>
+            <span id="subHeader"></span>
+            <div id="links">
+                <a href="https://github.com/pranaygp/resume/blob/master/LatestResume.pdf">Resume</a>
+                <a href="https://github.com/pranaygp/">Github</a>
+                <a href="http://linkedin.com/in/pranaygp">LinkedIn</a>
+                <a href="https://www.facebook.com/boboskull">Facebook</a>
+                <a href="http://c.xkcd.com/random/comic/">???</a>
+            </div>
+        </div>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/typed.js/js/typed.js"></script>
+        <script>
+            $(function(){
+                $("#container span#header").typed({
+                    strings: ["I design.", "I develop.", "I code.", "I am Pranay"],
+                    typespeed: 0,
+                    showCursor: false,
+                    callback: typeSubHeader
+                });
+                function typeSubHeader(){
+                    $("#container span#subHeader").typed({
+                        strings: ["<br>and I'm still working on this website"],
+                        startDelay: 1000,
+                        typespeed: 0,
+                        showCursor: false,
+                        callback: function(){
+                            $("#links").slideDown(2000);
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
