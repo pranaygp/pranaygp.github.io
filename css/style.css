@@ -31,13 +31,14 @@ div#links a{
 	display: inline-block;
 
 	padding: 8px;
-	border-radius: 8px;
-	background-color: #FFB03B;
+    font-size: 24pt;
+/*	border-radius: 8px;*/
+/*	background-color: #FFB03B;*/
 	color: #FFF0A5;
 }
 
 div#links a:hover{
-	background-color: #B64926;
+	color: #FFB03B;
 }
 
 .typed-cursor{
