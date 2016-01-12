@@ -381,7 +381,7 @@ a:hover{
 #alternate-projects {
     top: 64px;
     position: absolute;
-    height: 30vh;
+/*    height: 30vh;*/
     overflow: hidden;
     opacity: 0;
     left: 0;
@@ -422,4 +422,28 @@ a:hover{
     width: 31%;
     min-height: 100vh;
 /*    padding-right: 3%;*/
+}
+
+#resume-pdf {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+
+
+body {
+    overflow-x: hidden;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+}
+
+.page2{
+    overflow-y: hidden;
 }

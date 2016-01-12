@@ -8,6 +8,8 @@
     </head>
     <body>
 
+        <iframe frameborder="0" id="resume-pdf" src="LatestResume.pdf" type="application/pdf" ></iframe>
+
         <div id="content">
 
             <div class="fullscreen-header">
@@ -184,8 +186,7 @@
                                 <div class="txt-white">Worked as an Extra in an Opera production of ”Manon Lescaut”.</div><br>
                             </div>
                         </div>
-                        <div class="placeholder"></div>
-                        <div class="placeholder"></div>
+                        <div class="placeholder" style="height:800px"></div>
                     </div>
                 </div>
             </div>
@@ -243,7 +244,7 @@
                 window.scrollTo(0,0);
                 alternateSkillsLeftAlign = $("#alternate-skills").offset().left;
             });
-            
+
             // init controller
             var controller = new ScrollMagic.Controller({addIndicators:true});
 
@@ -314,15 +315,39 @@
                 duration: 0,    // the scene should last for a scroll distance of 100px
                 offset: page3Scene.duration() + page3Scene.offset()// start this scene after scrolling for 50px
             })
-            .setPin("#work-experience-resume-pin")
+            .setPin("#work-experience-resume-pin", {pushFollowers: true})
             .addTo(controller); // assign the scene to the controller
-            
+
             var leftColumnScene = new ScrollMagic.Scene({
                 duration: 300,    // the scene should last for a scroll distance of 100px
                 offset: page3Scene.duration() + page3Scene.offset()// start this scene after scrolling for 50px
             }).on("progress", function(e){
                 $("#alternate-skills").css({left : (1-e.progress) * alternateSkillsLeftAlign});
             })
+            .addTo(controller); // assign the scene to the controller
+
+
+            var resumePDFScene = new ScrollMagic.Scene({
+                duration: 300,    // the scene should last for a scroll distance of 100px
+                offset: leftColumnScene.duration() + leftColumnScene.offset()// start this scene after scrolling for 50px
+            }).on("progress", function(e){
+                $("#content").css({opacity : (1-e.progress)});
+            })
+            .on("end", function(e){
+                if(e.scrollDirection == "REVERSE"){
+                    console.log("entered!");
+                    $('#content').css({"pointer-events":"all"});
+                    $('#resume-pdf').css({"pointer-events":"none"});
+                } else {
+                console.log("left!");
+                $('#content').css({"pointer-events":"none"});
+                $('#resume-pdf').css({"pointer-events":"all"});
+                }
+            })
+//            .on("enter", function(e){
+//
+//                //                $('#content').unbind("mousewheel");
+//            })
             .addTo(controller); // assign the scene to the controller
         </script>
     </body>
