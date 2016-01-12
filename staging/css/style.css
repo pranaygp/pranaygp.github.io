@@ -236,6 +236,12 @@ body{
     text-align: center;
     color: white;
     z-index: 100;
+
+
+    margin: 0 -9999rem;
+/*   add back negative margin value */
+  padding: 0.25rem 9999rem;
+    overflow-y: auto;
 }
 
 .heading{
@@ -415,13 +421,15 @@ a:hover{
 #alternate-skills {
     position: fixed;
     top: 0px;
+/*    left: 0px;*/
     left: calc(-1 * (31% + 1% + 10px) );
+    margin-left: -1%;
     padding-left: calc(1% + 10px);
     padding-top: 1000px;
     z-index: 50;
-    width: 31%;
+    width: 29%;
     min-height: 100vh;
-/*    padding-right: 3%;*/
+    padding-right: 3%;
 }
 
 #resume-pdf {
@@ -446,4 +454,25 @@ body {
 
 .page2{
     overflow-y: hidden;
+    border-bottom: 15px solid #B64926;
+}
+
+
+
+.contact-icon {
+    font-size: 30pt;
+    padding: 2pt;
+    line-height: 34pt;
+    vertical-align: middle;
+}
+
+.hidden-container {
+/*    height: 0px;*/
+/*    overflow-y: hidden;*/
+    opacity: 0;
+    display: none;
+}
+
+.no-pointer-events{
+    pointer-events: none;
 }

@@ -1,0 +1,37 @@
+{
+  "name": "pedit",
+  "homepage": "https://github.com/pranaygp/pedit",
+  "authors": [
+    "Pranay Prakash <pranay.gp@gmail.com>"
+  ],
+  "description": "Make website easy to edit using a chrome extension",
+  "main": "pedit.js",
+  "moduleType": [],
+  "keywords": [
+    "pedit",
+    "cms",
+    "static",
+    "site",
+    "developer",
+    "client"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.4.1",
+  "_release": "0.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.1",
+    "commit": "f0c7ab944437c75f9ed83ecdda4d3a72e2db9034"
+  },
+  "_source": "git://github.com/pranaygp/pedit.git",
+  "_target": "~0.4.1",
+  "_originalSource": "pedit-cms",
+  "_direct": true
+}
