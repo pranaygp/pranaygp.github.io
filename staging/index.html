@@ -27,20 +27,20 @@
 
                 <div id="contact" class="medium onerow">
                     <div class="col2">
-                        <a href="http://github.com/pranaygp" class="contact-icon fa fa-github"></a>
+                        <a target="_blank" href="http://github.com/pranaygp" class="contact-icon fa fa-github"></a>
                     </div>
                     <div class="col1">
-                        <a href="http://linkedin.com/in/pranaygp" class="contact-icon fa fa-linkedin"></a>
+                        <a target="_blank" href="http://linkedin.com/in/pranaygp" class="contact-icon fa fa-linkedin"></a>
                     </div>
                     <div class="col6">
-                        <a href="http://pranayprakash.co">http://pranayprakash.co</a> <br/>
-                        <a href="mailto:pgpraka2@illinois.edu">pgpraka2@illinois.edu</a> | 217.904.6214
+                        <a target="_blank" href="http://pranayprakash.co">http://pranayprakash.co</a> <br/>
+                        <a target="_blank" href="mailto:pgpraka2@illinois.edu">pgpraka2@illinois.edu</a> | 217.904.6214
                     </div>
                     <div class="col1">
-                        <a href="http://facebook.com/boboskull" class="contact-icon fa fa-facebook"></a>
+                        <a target="_blank" href="http://facebook.com/boboskull" class="contact-icon fa fa-facebook"></a>
                     </div>
                     <div class="col2 last">
-                        <a href="http://c.xkcd.com/random/comic/" class="contact-icon fa fa-question"></a>
+                        <a target="_blank" href="http://c.xkcd.com/random/comic/" class="contact-icon fa fa-question"></a>
                     </div>
                 </div>
 
@@ -159,28 +159,44 @@
                             </div>
                         </div>
                         <div class="projects-container onerow">
-                            <div class="pre-resume-projects-container">
-                                <div class="col3">
+                            <div class="pre-resume-projects-container resume">
+                                <div class="col3 ">
                                     <img class="grid-img" src="images/projects/1.png">
-                                    <p class="text txt-white">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+                                    <span class="txt-white sub-heading">PEDIT</span><br>
+                                    <span class="txt-white description">WEB AND CHROME</span><br>
+                                    <span class="txt-white location"><a target="_blank" href="http://github.com/pranaygp/pedit">Github</a></span><br>
+                                    <div class="txt-white">A simple plugin that makes your website content easily editable, powered by a chrome extension. CMS for the masses.</div>
                                 </div>
                                 <div class="col3">
                                     <img class="grid-img" src="images/projects/2.png">
-                                    <p class="text txt-white">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+                                    <span class="txt-white sub-heading">BIRDLE</span><br>
+                                    <span class="txt-white description"> ANDROID</span><br>
+                                    <span class="txt-white location"><a target="_blank" href="http://github.com/pranaygp/birdle">Github</a></span><br>
+                                    <div class="txt-white">An app that lets you download and tag songs that you find while listening to them using the Youtube App.</div>
                                 </div>
                                 <div class="col3">
                                     <img class="grid-img" src="images/projects/3.png">
-                                    <p class="text txt-white">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+                                    <span class="txt-white sub-heading">SCAVAR</span><br>
+                                    <span class="txt-white description"> AUGMENTED REALITY</span><br>
+                                    <span class="txt-white bold">
+                                        1st place - Wildhacks - Northwestern University</span><br>
+                                    <span class="txt-white location"><a target="_blank" href="http://devpost.com/software/scavar-vuhod1">Devpost</a></span><br>
+                                    <span class="txt-white location"><a target="_blank" href="http://github.com/pranaygp/scavar3">Github</a></span><br>
+                                    <div class="txt-white">An awesome implementation of an augmented reality semi-virtual scavenger hun (clue hunt) using sponsor stickers as image targets!</div>
                                 </div>
                                 <div class="col3 last">
                                     <img class="grid-img" src="images/projects/4.png">
-                                    <p class="text txt-white">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+                                    <span class="txt-white sub-heading">HOME INDEX</span><br>
+                                    <span class="txt-white description">WEB AND MACHINE LEARNING</span><br>
+                                    <span class="txt-white bold"> 2nd place - Allstate Connected Home Hackathon</span><br>
+                                    <span class="txt-white location"><a target="_blank" href="http://devpost.com/software/homeindex">Devpost</a></span><br>
+                                    <span class="txt-white location"><a target="_blank" href="http://github.com/pranaygp/AllstateHack">Github</a></span><br>
+                                    <div class="txt-white">A service that collects data from Allstate’s A6 IoT platform to do anomaly detection and make pretty graphs.</div>
                                 </div>
                             </div>
                             <div class="resume" id="alternate-projects">
                                 <div class="col4">&nbsp;</div>
                                 <div class="col8 last">
-                                    <div class="txt-white heading">PROJECTS</div><br>
                                     <span class="txt-white sub-heading">PEDIT |</span><span class="txt-white description"> WEB AND CHROME</span><br>
                                     <div class="txt-white location">http://github.com/pranaygp/pedit</div>
                                     <div class="txt-white">A simple plugin that makes your website content easily editable, powered by a chrome extension. CMS for the masses.</div><br>
@@ -353,7 +369,7 @@
                 alternateSkillsPaddingLeft = Math.abs(parseInt($(".onepcssgrid-1200").css("margin-left"))-20);
                 //                alternateSkillsLeftAlign = $("#alternate-skills").offset().left - alternateSkillsPaddingLeft;
 
-                console.log($("#work-experience-section").offset().left);
+//                console.log($("#work-experience-section").offset().left);
 
                 $("#alternate-skills").show().width($("#work-experience-section").offset().left - ($(window).width()*0.04) );
 
@@ -390,8 +406,8 @@
                 recalculateOffsets();
 
                 $(".more-container").click(function(){
-                    $(".hidden-container").show().animate({opacity:1}, 1000);
-                    $("html, body").animate({scrollTop: $(".skills-container").offset().top - ($("#contact").offset().top - $(window).scrollTop()) - $("#contact").height() + $(".more-container").parent().height()}, 1000);
+                    $(".hidden-container").show().animate({opacity:1}, 2500);
+                    $("html, body").animate({scrollTop: $(".skills-container").offset().top - ($("#contact").offset().top - $(window).scrollTop()) - $("#contact").height() + $(".more-container").parent().height()}, 400);
                     recalculateOffsets();
 
 
@@ -434,6 +450,12 @@
             .on("progress", function(e){
                 $(".pre-resume-projects-container").css({opacity: (1-e.progress)});
                 $("#alternate-projects").css({opacity: (e.progress)});
+
+                if(e.progress > 0.5)
+                    $("#alternate-projects").css({"pointer-events":"all"});
+                else
+                    $("#alternate-projects").css({"pointer-events":"none"});
+
                 //                $("#projects-page-placeholder").css({height: "calc(" + (1-e.progress) + "* 100vh)"})
             })
             .on("start", leftColumnWidthAndPadding)

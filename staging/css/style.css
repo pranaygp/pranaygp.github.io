@@ -373,7 +373,7 @@ body{
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #FFF;
 }
 
 a:hover{
@@ -391,6 +391,7 @@ a:hover{
     overflow: hidden;
     opacity: 0;
     left: 0;
+    pointer-events: none;
 }
 
 #projects-page-heading {
@@ -479,4 +480,8 @@ body {
 
 .no-pointer-events{
     pointer-events: none;
+}
+
+.pre-resume-projects-container {
+    text-align: center;
 }
