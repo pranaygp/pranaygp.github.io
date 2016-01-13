@@ -296,13 +296,6 @@
             var alternateSkillsLeftAlign;
 
             function recalculateOffsets(){
-
-
-
-                nameScene.duration(nameSceneDuration());
-                nameScene.offset(nameSceneOffset());
-                titleScene.offset(calculateNameSceneEndTime());
-                subTitleScene.offset(calculateNameSceneEndTime());
                 projectsScene.offset(projectsSceneOffset());
                 page2Scene.offset(page2SceneOffset());
                 page3Scene.offset(page3SceneOffset());
@@ -383,6 +376,13 @@
 
             $(document).ready(function(){
                 $(this).scrollTop(0);
+
+
+                nameScene.duration(nameSceneDuration());
+                nameScene.offset(nameSceneOffset());
+                titleScene.offset(calculateNameSceneEndTime());
+                subTitleScene.offset(calculateNameSceneEndTime());
+
                 $(".resume").linkify({
                     target: "_blank"
                 });
@@ -400,7 +400,7 @@
             });
 
             // init controller
-            var controller = new ScrollMagic.Controller({addIndicators:false});
+            var controller = new ScrollMagic.Controller({addIndicators:true});
 
             // create a scene
             var nameScene = new ScrollMagic.Scene({
