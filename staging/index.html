@@ -416,7 +416,7 @@
             });
 
             // init controller
-            var controller = new ScrollMagic.Controller({addIndicators:false});
+            var controller = new ScrollMagic.Controller({addIndicators:true});
 
             // create a scene
             var nameScene = new ScrollMagic.Scene({
@@ -505,12 +505,12 @@
             })
             .on("end", function(e){
                 if(e.scrollDirection == "REVERSE"){
-                    console.log("entered!");
-                    $('#content').css({"pointer-events":"all"});
+//                    console.log("entered!");
+                    $('#content, #alternate-projects').css({"pointer-events":"all"});
                     $('#resume-pdf').css({"pointer-events":"none"});
                 } else {
-                    console.log("left!");
-                    $('#content').css({"pointer-events":"none"});
+//                    console.log("left!");
+                    $('#content, #alternate-projects').css({"pointer-events":"none"});
                     $('#resume-pdf').css({"pointer-events":"all"});
                 }
             })
