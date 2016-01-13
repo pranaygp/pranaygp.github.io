@@ -433,6 +433,7 @@ a:hover{
     padding-left: 2%;
     overflow-x: hidden;
     overflow-y: auto;
+    display: none;
 }
 
 #resume-pdf {
