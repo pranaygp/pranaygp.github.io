@@ -235,7 +235,7 @@
                                 <div class="txt-white">Worked as an Extra in an Opera production of ”Manon Lescaut”.</div><br>
                             </div>
                         </div>
-                        <div class="placeholder" style="height:1035px"></div>
+                        <div id="last-section-placeholder" class="placeholder" style="height:150vh"></div>
                     </div>
                 </div>
             </div>
@@ -296,12 +296,35 @@
             var alternateSkillsLeftAlign;
 
             function recalculateOffsets(){
+
+
+
+                nameScene.duration(nameSceneDuration());
+                nameScene.offset(nameSceneOffset());
+                titleScene.offset(calculateNameSceneEndTime());
+                subTitleScene.offset(calculateNameSceneEndTime());
                 projectsScene.offset(projectsSceneOffset());
                 page2Scene.offset(page2SceneOffset());
                 page3Scene.offset(page3SceneOffset());
                 workExperienceScene.offset(workExperienceSceneOffset());
                 leftColumnScene.offset(leftColumnSceneOffset());
                 resumePDFScene.offset(resumePDFSceneOffset());
+
+                leftColumnWidthAndPadding();
+
+                $("#last-section-placeholder").height(($(window).height()*0.9 + resumePDFScene.offset() + resumePDFScene.duration() - $(".page3").offset().top));
+            }
+
+            function nameSceneDuration(){
+                return ($(".fullscreen-header").height() - $(".name-container").offset().top - $(".name-container").height() - 5);
+            }
+
+            function nameSceneOffset(){
+                return $(".name-container").offset().top + 12;
+            }
+
+            function calculateNameSceneEndTime(){
+                return nameScene.duration() + nameScene.offset();
             }
 
             function projectsSceneOffset(){
@@ -332,7 +355,27 @@
                 return leftColumnScene.duration() + leftColumnScene.offset() + 200;
             }
 
+            function leftColumnWidthAndPadding(){
+                //                alternateSkillsPaddingLeft = parseInt($("#alternate-skills").css("padding-left").replace("px", "")) + parseInt($(".onepcssgrid-1200").css("margin-left").replace("px", ""));
+                alternateSkillsPaddingLeft = Math.abs(parseInt($(".onepcssgrid-1200").css("margin-left"))-20);
+                //                alternateSkillsLeftAlign = $("#alternate-skills").offset().left - alternateSkillsPaddingLeft;
 
+                console.log($("#work-experience-section").offset().left);
+
+                $("#alternate-skills").width($("#work-experience-section").offset().left - ($(window).width()*0.04) );
+
+
+                //                $("#alternate-skills").css({"padding-left":alternateSkillsPaddingLeft, "left": (-1 * $("#alternate-skills").width()) - parseInt($("#alternate-skills").css("padding-right")) - alternateSkillsPaddingLeft });
+
+                $("#alternate-skills").css({"left": (-1 * $("#alternate-skills").width()) - parseInt($("#alternate-skills").css("padding-right")) - parseInt($("#alternate-skills").css("padding-left")) });
+                //                $("#alternate-skills").css({"padding-left":alternateSkillsPaddingLeft, "left": alternateSkillsLeftAlign});
+
+                alternateSkillsLeftAlign = $("#alternate-skills").offset().left;
+
+
+            }
+
+            var alternateSkillsPaddingLeft;
 
             $(document).resize(function(){
                 recalculateOffsets();
@@ -340,14 +383,11 @@
 
             $(document).ready(function(){
                 $(this).scrollTop(0);
-
-                recalculateOffsets();
-
-                alternateSkillsLeftAlign = $("#alternate-skills").offset().left;
-
                 $(".resume").linkify({
                     target: "_blank"
                 });
+
+                recalculateOffsets();
 
                 $(".more-container").click(function(){
                     $(".hidden-container").show().animate({opacity:1}, 1000);
@@ -360,19 +400,15 @@
             });
 
             // init controller
-            var controller = new ScrollMagic.Controller({addIndicators:true});
+            var controller = new ScrollMagic.Controller({addIndicators:false});
 
             // create a scene
             var nameScene = new ScrollMagic.Scene({
-                duration: ($(".fullscreen-header").height() - $(".name-container").offset().top - $(".name-container").height() - 5),    // the scene should last for a scroll distance of 100px
-                offset: $(".name-container").offset().top + 12     // start this scene after scrolling for 50px
+                duration: nameSceneDuration(),    // the scene should last for a scroll distance of 100px
+                offset: nameSceneOffset()     // start this scene after scrolling for 50px
             })
             .setPin(".name-container") // pins the element for the the scene's duration
             .addTo(controller); // assign the scene to the controller
-
-            function calculateNameSceneEndTime(){
-                return nameScene.duration() + nameScene.offset();
-            }
 
             // create a scene
             var titleScene = new ScrollMagic.Scene({
@@ -400,6 +436,7 @@
                 $("#alternate-projects").css({opacity: (e.progress)});
                 //                $("#projects-page-placeholder").css({height: "calc(" + (1-e.progress) + "* 100vh)"})
             })
+            .on("start", leftColumnWidthAndPadding)
             .addTo(controller); // assign the scene to the controller
 
 

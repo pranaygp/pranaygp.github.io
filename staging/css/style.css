@@ -6,63 +6,63 @@
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-Hai.ttf);
+    src: url(../fonts/lato/Lato-Hai.ttf);
     font-weight: 100;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-HaiIta.ttf);
+    src: url(../fonts/lato/Lato-HaiIta.ttf);
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-Lig.ttf);
+    src: url(../fonts/lato/Lato-Lig.ttf);
     font-weight: 300;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-LigIta.ttf);
+    src: url(../fonts/lato/Lato-LigIta.ttf);
     font-weight: lighter;
     font-style: 300;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-Reg.ttf);
+    src: url(../fonts/lato/Lato-Reg.ttf);
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-RegIta.ttf);
+    src: url(../fonts/lato/Lato-RegIta.ttf);
     font-style: italic;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-Bol.ttf);
+    src: url(../fonts/lato/Lato-Bol.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-BolIta.ttf);
+    src: url(../fonts/lato/Lato-BolIta.ttf);
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-Bla.ttf);
+    src: url(../fonts/lato/Lato-Bla.ttf);
     font-weight: 900;
 }
 
 @font-face {
     font-family: Lato;
-    src: url(fonts/lato/Lato-BlaIta.ttf);
+    src: url(../fonts/lato/Lato-BlaIta.ttf);
     font-weight: ;
     font-style: italic;
 }
@@ -72,54 +72,54 @@
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-Thin.otf);
+    src: url(../fonts/raleway/Raleway-Thin.otf);
     font-weight: 100;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-ExtraLight.otf);
+    src: url(../fonts/raleway/Raleway-ExtraLight.otf);
     font-weight: 200;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-Light.otf);
+    src: url(../fonts/raleway/Raleway-Light.otf);
     font-weight: 300;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-Regular.otf);
+    src: url(../fonts/raleway/Raleway-Regular.otf);
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-Medium.otf);
+    src: url(../fonts/raleway/Raleway-Medium.otf);
     font-weight: 500;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-SemiBold.otf);
+    src: url(../fonts/raleway/Raleway-SemiBold.otf);
     font-weight: 600;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-Bold.otf);
+    src: url(../fonts/raleway/Raleway-Bold.otf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-ExtraBold.otf);
+    src: url(../fonts/raleway/Raleway-ExtraBold.otf);
     font-weight: 800;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(fonts/raleway/Raleway-Heavy.otf);
+    src: url(../fonts/raleway/Raleway-Heavy.otf);
     font-weight: 900;
 }
 
@@ -422,14 +422,17 @@ a:hover{
     position: fixed;
     top: 0px;
 /*    left: 0px;*/
-    left: calc(-1 * (31% + 1% + 10px) );
+/*    left: calc(-1 * (31% + 1% + 10px) );*/
     margin-left: -1%;
-    padding-left: calc(1% + 10px);
+/*    padding-left: calc(1% + 10px);*/
     padding-top: 1000px;
     z-index: 50;
     width: 29%;
     min-height: 100vh;
-    padding-right: 3%;
+    padding-right: 2%;
+    padding-left: 2%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #resume-pdf {
