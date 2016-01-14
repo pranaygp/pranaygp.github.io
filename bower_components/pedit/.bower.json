@@ -23,15 +23,15 @@
     "test",
     "tests"
   ],
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "f0c7ab944437c75f9ed83ecdda4d3a72e2db9034"
+    "tag": "0.4.2",
+    "commit": "f17af40a3ba0dd323649140d66113cc2dac38af1"
   },
   "_source": "git://github.com/pranaygp/pedit.git",
-  "_target": "~0.4.1",
+  "_target": "~0.4.2",
   "_originalSource": "pedit-cms",
   "_direct": true
 }
