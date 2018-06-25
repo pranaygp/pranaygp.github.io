@@ -4,6 +4,6 @@
     "cloud": "v2"
   },
   "env": {
-    "SECRET": "@secret-key"
+    "SECRET": " @secret-key"
   }
 }
