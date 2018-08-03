@@ -1,5 +1,7 @@
 {
   "type": "docker",
+  "public": "true",
+  "alias": "pranay.gp",
   "features": {
     "cloud": "v2"
   } 
